@@ -19,7 +19,7 @@ const Career = () => {
   const getAllJobs = async () => {
     try {
       const response = await axios.post(
-        "https://lystloc-career-page-backend.onrender.com/get_all_jobs",
+        "http://localhost:5000/get_all_jobs",
         {}
       );
       setJobs(response.data);
@@ -31,7 +31,7 @@ const Career = () => {
 
   const getDepartments = async () => {
     try {
-      const response = await axios.get("https://lystloc-career-page-backend.onrender.com/departments");
+      const response = await axios.get("http://localhost:5000/departments");
       setDepartments(response.data);
     } catch (error) {
       console.error(error);
