@@ -13,7 +13,7 @@ const JobDetails = () => {
 
   const getJobDetails = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/get_job", {
+      const response = await axios.post("https://lystloc-career-page-backend.onrender.com/get_job", {
         job_id: jobId,
       });
       setJob(response.data);
